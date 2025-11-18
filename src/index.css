@@ -1,13 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap');
-
 @import "tailwindcss";
 
+/* ========== CHILL GAMER THEME SETUP ========== */
 @plugin "daisyui" {
-  themes: light --default, dark --prefersdark, luxury;
+  name: "luxury";
+  default: true;
 }
 
-:root {
+:root[data-theme="luxury"] {
+  --color-primary: #F25C3C;
+  --color-primary-focus: #FFB86B;
+  --color-primary-content: #FCEFD8;
+
+  --color-secondary: #3AB5A8;
+  --color-secondary-focus: #4FD1C5;
+  --color-secondary-content: #FCEFD8;
+
+  --color-accent: #5C3A2E;
+  --color-neutral: #3B1E18;
+
+  --color-base-100: #3B1E18;
+  --color-base-200: #5C3A2E;
+  --color-base-300: #C7A48A;
+  --color-base-content: #FCEFD8;
+
+  --color-info: #4FD1C5;
+  --color-success: #3AB5A8;
+  --color-warning: #FFB86B;
+  --color-error: #F25C3C;
+
+  /* UI Details */
+  --rounded-box: 1.5rem;
+  --rounded-btn: 1.25rem;
+  --animation-btn: 0.25s;
+  --btn-focus-scale: 0.95;
+  --border-btn: 2px;
+}
+
+/* Apply the font */
+body {
   font-family: 'Play', sans-serif;
-  font-weight: 400;
-  font-style: normal;
 }
